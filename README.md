@@ -24,3 +24,11 @@ Udacity CarND Term 2  - Project 2
 4. Run it: `./ExtendedKF path/to/input.txt path/to/output.txt`. You can find
    some sample inputs in 'data/'.
     - eg. `./ExtendedKF ../data/sample-laser-radar-measurement-data-1.txt output.txt`
+
+## Files in the `src` Folder
+* `main.cpp` - reads in data, calls a function to run the Kalman filter, calls a function to calculate RMSE
+* `ukf.cpp` - initializes the filter, calls the predict and update function, defines the predict and update functions
+* `tools.cpp` - function to calculate RMSE
+
+## Data
+The data file we are using is the same from EKF. Again each line in the data file represents either a lidar or radar measurement marked by "L" or "R" on the starting line. The next columns are either the two lidar position measurements (x,y) or the three radar position measurements (rho, phi, rho_dot). Then comes the time stamp and finally the ground truth values for x, y, vx, vy, yaw, yawrate.
