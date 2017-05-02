@@ -32,3 +32,18 @@ Udacity CarND Term 2  - Project 2
 
 ## Data
 The data file we are using is the same from EKF. Again each line in the data file represents either a lidar or radar measurement marked by "L" or "R" on the starting line. The next columns are either the two lidar position measurements (x,y) or the three radar position measurements (rho, phi, rho_dot). Then comes the time stamp and finally the ground truth values for x, y, vx, vy, yaw, yawrate.
+
+
+## Simulation Results
+
+Input file: `obj_pose-laser-radar-synthetic-input.txt`.
+
+### RMSE Outputs for the Sample Inputs
+
+* Use both Radar and Lidar measurements  
+The `px, py, vx, vy` output coordinates have an `RMSE = [0.0651648, 0.0605379, 0.533212, 0.544193]`.
+* Use only Radar measurement
+The `px, py, vx, vy` output coordinates have an `RMSE = [0.0651648, 0.0605379, 0.533212, 0.544193]`.
+* Use only Lidar measurement
+The `px, py, vx, vy` output coordinates have an `RMSE = [0.0651648, 0.0605379, 0.533212, 0.544193]`.
+
