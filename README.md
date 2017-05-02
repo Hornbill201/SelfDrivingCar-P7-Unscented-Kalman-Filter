@@ -42,8 +42,11 @@ Input file: `obj_pose-laser-radar-synthetic-input.txt`.
 
 * Use both Radar and Lidar measurements  
 The `px, py, vx, vy` output coordinates have an `RMSE = [0.0651648, 0.0605379, 0.533212, 0.544193]`.
-* Use only Radar measurement
+* Use only Radar measurement  
 The `px, py, vx, vy` output coordinates have an `RMSE = [0.0651648, 0.0605379, 0.533212, 0.544193]`.
-* Use only Lidar measurement
-The `px, py, vx, vy` output coordinates have an `RMSE = [0.0651648, 0.0605379, 0.533212, 0.544193]`.
+* Use only Lidar measurement  
+The `px, py, vx, vy` output coordinates have an `RMSE = [0.0651648, 0.0605379, 0.533212, 0.544193]`.  
+
+### Performance Visualization
+
 
