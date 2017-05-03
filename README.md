@@ -21,9 +21,9 @@ Udacity CarND Term 2  - Project 2
 1. Clone this repo.
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./ExtendedKF path/to/input.txt path/to/output.txt`. You can find
+4. Run it: `./UnscentedKF path/to/input.txt path/to/output.txt`. You can find
    some sample inputs in 'data/'.
-    - eg. `./ExtendedKF ../data/sample-laser-radar-measurement-data-1.txt output.txt`
+    - eg. `./UnscentedKF ../data/obj_pose-laser-radar-synthetic-input.txt output.txt`
 
 ## Files in the `src` Folder
 * `main.cpp` - reads in data, calls a function to run the Kalman filter, calls a function to calculate RMSE
@@ -38,6 +38,14 @@ The data file we are using is the same from EKF. Again each line in the data fil
 
 Input file: `obj_pose-laser-radar-synthetic-input.txt`.
 
+** At the beginning, the values for the process noise `std_a_` and `std_yawdd_` are both set to 30. I experiment with different process noise values to lower the RMSE. At the end, I am using 
+```
+std_a_ = 1.5;  
+std_yawdd_ = 0.6;  
+```
+which make the RMSE meet the requirement `RMSE <  [.09, .10, .40, .30]`.
+**
+
 ### RMSE Outputs for the Sample Inputs
 
 * Use both Radar and Lidar measurements  
@@ -46,6 +54,9 @@ The `px, py, vx, vy` output coordinates have an `RMSE = [0.0684438, 0.0825465, 0
 The `px, py, vx, vy` output coordinates have an `RMSE = [0.155867, 0.219952, 0.368041, 0.321468]`.
 * Use only Lidar measurement  
 The `px, py, vx, vy` output coordinates have an `RMSE = [0.106743, 0.0979096, 0.607159, 0.251299]`.  
+
+** From the above results, we can find that sensor fusion gives better results than using only one sensor type.**
+
 
 ### Performance Visualization
 
