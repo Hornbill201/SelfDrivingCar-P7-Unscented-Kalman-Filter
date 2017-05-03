@@ -1,9 +1,9 @@
 # SelfDrivingCar P7 Unscented Kalman Filter
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)  
 Udacity CarND Term 2  - Project 2 
+---
 
 The main goal of the project is to apply Unscented Kalman Filter to fuse data from LIDAR and Radar sensors of a self driving car using C++. The project was created with the Udacity [Starter Codes](https://github.com/udacity/CarND-Unscented-Kalman-Filter-Project).
----
 
 ## Dependencies
 
