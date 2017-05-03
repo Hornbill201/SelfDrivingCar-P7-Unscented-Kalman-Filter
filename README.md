@@ -1,6 +1,8 @@
 # SelfDrivingCar P7 Unscented Kalman Filter
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)  
 Udacity CarND Term 2  - Project 2 
+
+The main goal of the project is to apply Unscented Kalman Filter to fuse data from LIDAR and Radar sensors of a self driving car using C++. The project was created with the Udacity [Starter Codes](https://github.com/udacity/CarND-Unscented-Kalman-Filter-Project).
 ---
 
 ## Dependencies
@@ -38,23 +40,23 @@ The data file we are using is the same from EKF. Again each line in the data fil
 
 Input file: `obj_pose-laser-radar-synthetic-input.txt`.
 
-*At the beginning, the values for the process noise `std_a_` and `std_yawdd_` are both set to 30. I experiment with different process noise values to lower the RMSE. At the end, I am using 
+__At the beginning, the values for the process noise `std_a_` and `std_yawdd_` are both set to 30. I experiment with different process noise values to lower the RMSE. At the end, I am using 
 ```
 std_a_ = 1.5;  
 std_yawdd_ = 0.6;  
 ```
-which make the RMSE meet the requirement `RMSE <  [.09, .10, .40, .30]`.*
+which make the RMSE meet the requirement `RMSE <  [.09, .10, .40, .30]`.__
 
 ### RMSE Outputs for the Sample Inputs
 
 * Use both Radar and Lidar measurements  
 The `px, py, vx, vy` output coordinates have an `RMSE = [0.0684438, 0.0825465, 0.336155, 0.218055]`.
-* Use only Radar measurement  
+* Use __only Radar__ measurement  
 The `px, py, vx, vy` output coordinates have an `RMSE = [0.155867, 0.219952, 0.368041, 0.321468]`.
-* Use only Lidar measurement  
+* Use __only Lidar__ measurement  
 The `px, py, vx, vy` output coordinates have an `RMSE = [0.106743, 0.0979096, 0.607159, 0.251299]`.  
 
-* From the above results, we can find that sensor fusion gives better results than using only one sensor type.*
+__From the above results, we can find that sensor fusion gives better results than using only one sensor type.__
 
 
 ### Performance Visualization
