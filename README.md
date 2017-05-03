@@ -38,13 +38,12 @@ The data file we are using is the same from EKF. Again each line in the data fil
 
 Input file: `obj_pose-laser-radar-synthetic-input.txt`.
 
-** At the beginning, the values for the process noise `std_a_` and `std_yawdd_` are both set to 30. I experiment with different process noise values to lower the RMSE. At the end, I am using 
+**At the beginning, the values for the process noise `std_a_` and `std_yawdd_` are both set to 30. I experiment with different process noise values to lower the RMSE. At the end, I am using 
 ```
 std_a_ = 1.5;  
 std_yawdd_ = 0.6;  
 ```
-which make the RMSE meet the requirement `RMSE <  [.09, .10, .40, .30]`.
-**
+which make the RMSE meet the requirement `RMSE <  [.09, .10, .40, .30]`.**
 
 ### RMSE Outputs for the Sample Inputs
 
@@ -59,5 +58,5 @@ The `px, py, vx, vy` output coordinates have an `RMSE = [0.106743, 0.0979096, 0.
 
 
 ### Performance Visualization
-
+![img](figs/visual.png)  
 
